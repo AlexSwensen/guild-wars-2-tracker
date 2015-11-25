@@ -10,12 +10,15 @@ var inject = require('gulp-inject');
 
 var paths = {
   sass: ['./scss/**/*.scss'],
-  img: ['./www/assets/img/*']
+  css:  ['./www/assets/css/'],
+  img:  ['./www/assets/img/*']
 };
 
 gulp.task('default', ['sass', 'inject']);
 
-gulp.task('sass', function(done) {
+// (mostly) default Ionic gulp tasks. Modified to work with the changed project structure.
+
+gulp.task('sass', function (done) {
   gulp.src('./scss/ionic.app.scss')
     .pipe(sass())
     .on('error', sass.logError)
@@ -23,30 +26,23 @@ gulp.task('sass', function(done) {
     .pipe(minifyCss({
       keepSpecialComments: 0
     }))
-    .pipe(rename({ extname: '.min.css' }))
+    .pipe(rename({extname: '.min.css'}))
     .pipe(gulp.dest('./www/assets/css/'))
     .on('end', done);
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
   gulp.watch(paths.sass, ['sass']);
 });
 
-gulp.task('install', ['git-check'], function() {
+gulp.task('install', ['git-check'], function () {
   return bower.commands.install()
-    .on('log', function(data) {
+    .on('log', function (data) {
       gutil.log('bower', gutil.colors.cyan(data.id), data.message);
     });
 });
 
-gulp.task('inject', function () {
-  var target = gulp.src('./www/index.html');
-  var sources = gulp.src('./www/app/**/*.js', {read: false});
-  return target.pipe(inject(sources, {relative: true}))
-    .pipe(gulp.dest('./www'));
-});
-
-gulp.task('git-check', function(done) {
+gulp.task('git-check', function (done) {
   if (!sh.which('git')) {
     console.log(
       '  ' + gutil.colors.red('Git is not installed.'),
@@ -57,4 +53,24 @@ gulp.task('git-check', function(done) {
     process.exit(1);
   }
   done();
+});
+
+// Begin custom gulp tasks
+
+gulp.task('inject', function () {
+  var target = gulp.src('./www/index.html');
+  var sources = gulp.src('./www/app/**/*.js', {read: false});
+  return target.pipe(inject(sources, {relative: true}))
+    .pipe(gulp.dest('./www'));
+});
+
+gulp.task('image-min', function (done) {
+  return gulp.src('images/**.*')
+    .pipe(imagemin({
+      progressive:       true,
+      optimizationLevel: 3,
+      svgoPlugins:       [{removeViewBox: false}],
+      use:               [pngquant()]
+    }))
+    .pipe(gulp.dest('www/assets/img'));
 });
