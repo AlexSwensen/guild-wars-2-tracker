@@ -12,14 +12,18 @@
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
+
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
     <!-- your app's js -->
+    <!-- if something doesn't work or doesn't appear here, run `gulp inject` -->
     <!-- inject:js -->
     <script src="app/app.js"></script>
+    <script src="app/app.routes.js"></script>
     <script src="app/controllers.js"></script>
     <script src="app/services.js"></script>
+    <script src="app/components/menu/menuController.js"></script>
     <!-- endinject -->
 
   </head>
