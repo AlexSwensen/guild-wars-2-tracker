@@ -8,27 +8,27 @@ angular.module('starter.services', [])
     id: 0,
     name: 'Ben Sparrow',
     lastText: 'You on your way?',
-    face: 'img/ben.png'
+    face: 'assets/img/ben.png'
   }, {
     id: 1,
     name: 'Max Lynx',
     lastText: 'Hey, it\'s me',
-    face: 'img/max.png'
+    face: 'assets/img/max.png'
   }, {
     id: 2,
     name: 'Adam Bradleyson',
     lastText: 'I should buy a boat',
-    face: 'img/adam.jpg'
+    face: 'assets/img/adam.jpg'
   }, {
     id: 3,
     name: 'Perry Governor',
     lastText: 'Look at my mukluks!',
-    face: 'img/perry.png'
+    face: 'assets/img/perry.png'
   }, {
     id: 4,
     name: 'Mike Harrington',
     lastText: 'This is wicked good ice cream.',
-    face: 'img/mike.png'
+    face: 'assets/img/mike.png'
   }];
 
   return {
