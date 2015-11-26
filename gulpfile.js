@@ -7,6 +7,8 @@ var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
 var inject = require('gulp-inject');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
 
 var paths = {
   sass: ['./scss/**/*.scss'],

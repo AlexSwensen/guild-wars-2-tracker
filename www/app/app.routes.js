@@ -17,6 +17,18 @@ app.config(function ($stateProvider, $urlRouterProvider) {
           controller:  'homeController'
         }
       }
+    })
+    .state('app.achievementDetail', {
+      url: '/achievementDetail',
+      params: {
+        id: 1984
+      },
+      views: {
+        'menuContent': {
+          templateUrl: 'app/components/achievementDetail/achievementDetail.html',
+          controller: 'achievementDetailController'
+        }
+      }
     });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');

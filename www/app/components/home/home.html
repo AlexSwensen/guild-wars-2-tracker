@@ -2,9 +2,10 @@
   <ion-content>
     <div class="list">
 
-      <a class="item" ng-repeat="achievement in daily">
-        {{achievement.name}}
-        <p>{{achievement.id}}</p>
+      <a class="item item-avatar-left" ng-repeat="achievement in daily" ui-sref="app.achievementDetail({id: achievement.id})">
+        <img src="assets/img/Daily_Achievement.png" alt="">
+        <h2>{{achievement.name}}</h2>
+        <p>{{achievement.description||'No Description Available'}}</p>
       </a>
     </div>
   </ion-content>
