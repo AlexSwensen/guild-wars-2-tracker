@@ -1,5 +1,10 @@
 <ion-view view-title="Home">
   <ion-content>
-    <h3>Home</h3>
+    <div class="list">
+
+      <a class="item" ng-repeat="achievement in daily">
+        {{achievement.name}}
+      </a>
+    </div>
   </ion-content>
 </ion-view>
