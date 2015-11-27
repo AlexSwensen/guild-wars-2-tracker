@@ -21,7 +21,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     .state('app.achievementDetail', {
       url: '/achievementDetail',
       params: {
-        id: 1984
+        id: null
       },
       views: {
         'menuContent': {

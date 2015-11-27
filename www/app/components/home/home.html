@@ -1,5 +1,9 @@
 <ion-view view-title="Home">
   <ion-content>
+    <ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="updateDaily()">
+    </ion-refresher>
     <div class="list">
 
       <a class="item item-avatar-left" ng-repeat="achievement in daily" ui-sref="app.achievementDetail({id: achievement.id})">
