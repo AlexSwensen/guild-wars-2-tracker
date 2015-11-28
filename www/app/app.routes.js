@@ -1,4 +1,3 @@
-
 app.config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider
 
@@ -19,14 +18,30 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       }
     })
     .state('app.achievementDetail', {
-      url: '/achievementDetail',
+      url:    '/achievementDetail',
       params: {
         id: null
       },
-      views: {
+      views:  {
         'menuContent': {
           templateUrl: 'app/components/achievementDetail/achievementDetail.html',
-          controller: 'achievementDetailController'
+          controller:  'achievementDetailController'
+        }
+      }
+    })
+    .state('app.map', {
+      url:    '/map',
+      params: {
+        location: null,
+        posX:     null,
+        posY:     null,
+        layer:    null,
+        posID:    null
+      },
+      views:  {
+        'menuContent': {
+          templateUrl: 'app/components/map/map.html',
+          controller:  'mapController'
         }
       }
     });

@@ -7,6 +7,8 @@
   "dependencies": {
     "ngCordova": "~0.1.23-alpha",
     "restangular": "~1.5.1",
-    "lodash": "~3.10.1"
+    "lodash": "~3.10.1",
+    "angular-leaflet-directive": "~0.10.0",
+    "leaflet": "~0.7.7"
   }
 }
