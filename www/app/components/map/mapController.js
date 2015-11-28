@@ -33,7 +33,7 @@ viewController.controller('mapController', function ($scope, $ionicModal, $timeo
         continuousWorld: false,
         noWrap:          true,
         reuseTiles:      true,
-        detectRetina:    true
+        detectRetina:    false
       }
 
       //crs: L.CRS.Simple
