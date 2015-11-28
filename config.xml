@@ -13,7 +13,7 @@
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="16"/>
-  <preference name="StatusBarBackgroundColor" value="#ef473a"/>
+  <preference name="StatusBarBackgroundColor" value="#276c18"/>
   <preference name="BackupWebStorage" value="none"/>
   <preference name="xwalkVersion" value="15+"/>
   <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect"/>
