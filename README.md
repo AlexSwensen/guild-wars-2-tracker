@@ -10,4 +10,4 @@ I built this app for the following reasons:
 - To make my life (and others, hopefully) a little more convenient.
 - To show off the awesome work that the guys over at the Ionic Framework Team have done.
 
-The app is currently in a sate of development. I will update the readme as things progress. I aim to have a working proof of concept before wintersday.
+The app is currently in an early state of development. I will update the readme as things progress. I aim to have a working proof of concept before wintersday.
