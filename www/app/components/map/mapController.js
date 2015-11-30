@@ -10,11 +10,11 @@ viewController.controller('mapController', function ($scope, $ionicModal, $timeo
     bounds: {
       northEast: {
         lat: 180,
-        lng: -180
+        lng: 180
       },
       southWest: {
         lat: -180,
-        lng: 180
+        lng: -180
       }
     }
   });
