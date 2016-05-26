@@ -1,6 +1,9 @@
 # Guild Wars 2 Daily Tracker
 A Guild Wars 2 daily achievement tracker for those with a busy schedule.
 
+# This project is (temporarily) dead until i find the free time to get back into GW2. 
+## I write code full time for work now, and find little time for hobby projects, much less games. :-/
+
 --
 I built this app for the following reasons:
 
